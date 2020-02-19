@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="JsonPost_Demo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="User ID" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GEb-zW-bmn">
+                                <rect key="frame" x="16" y="144" width="382" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sqb-xj-SQc">
+                                <rect key="frame" x="16" y="194" width="382" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Body" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ait-ER-27T">
+                                <rect key="frame" x="16" y="244" width="382" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zhr-An-aOC">
+                                <rect key="frame" x="16" y="310" width="382" height="44"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <state key="normal" title="POST"/>
+                                <connections>
+                                    <action selector="btnPostClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VQB-TH-22A"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zhr-An-aOC" secondAttribute="trailing" constant="16" id="0Jm-yO-vu8"/>
+                            <constraint firstItem="Ait-ER-27T" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="2OZ-kR-m1E"/>
+                            <constraint firstItem="zhr-An-aOC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="IBo-8Y-o6V"/>
+                            <constraint firstItem="GEb-zW-bmn" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="O0v-yJ-Tyz"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="GEb-zW-bmn" secondAttribute="trailing" constant="16" id="QEi-60-VDo"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="sqb-xj-SQc" secondAttribute="trailing" constant="16" id="fDB-uM-dBG"/>
+                            <constraint firstItem="Ait-ER-27T" firstAttribute="top" secondItem="sqb-xj-SQc" secondAttribute="bottom" constant="16" id="hvQ-Re-I65"/>
+                            <constraint firstItem="GEb-zW-bmn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="mZe-ZX-dYn"/>
+                            <constraint firstItem="sqb-xj-SQc" firstAttribute="top" secondItem="GEb-zW-bmn" secondAttribute="bottom" constant="16" id="nQs-6N-DOh"/>
+                            <constraint firstItem="zhr-An-aOC" firstAttribute="top" secondItem="Ait-ER-27T" secondAttribute="bottom" constant="32" id="q2C-ix-K22"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ait-ER-27T" secondAttribute="trailing" constant="16" id="rl2-kx-mJC"/>
+                            <constraint firstItem="sqb-xj-SQc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="sYn-Ju-D3U"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="txtBody" destination="Ait-ER-27T" id="mQD-Td-vHb"/>
+                        <outlet property="txtTitle" destination="sqb-xj-SQc" id="mZD-nL-Aww"/>
+                        <outlet property="txtUID" destination="GEb-zW-bmn" id="pRB-6X-WzR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="140.57971014492756" y="126.5625"/>
+        </scene>
+    </scenes>
+</document>
